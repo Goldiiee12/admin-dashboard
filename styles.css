@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar content";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.header-top, .header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Space between left and right elements */
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and search bar */
+    margin-left: 20px;
+    flex-grow: 1; /* Allows the container to grow and use available space */
+}
+
+.header-top {
+    margin-bottom: 20px; /* Space below the header top */
+}
+
+.header-bottom {
+    margin-top: 20px; /* Space above the header bottom */
+}
+
+.header-top-left, .header-bottom-left {
+    margin-left: 20px;
+}
+
+.header-top-right, .header-bottom-right {
+    margin-right: 20px;
+}
+
+.search-bar {
+    padding: 0.5em 1em;
+    width: 100%; /* Adjusted width to fill the container */
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+    text-align: left;
+}
+
+.search-bar::placeholder {
+    text-align: left;
+    opacity: 1; /* Ensure placeholder is always visible */
+}
+
+.search-bar:focus {
+    border-color: #aaa;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.header-button {
+    padding: 0.5em 1em;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #45a049;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #555;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+}
+
+.content {
+    grid-area: content;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+
+
