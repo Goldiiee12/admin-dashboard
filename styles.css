@@ -5,6 +5,8 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Page */
+
 .dashboard {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -100,17 +102,14 @@ body {
     margin-left: 10px;
 }
 
+/* Sidebar Page */
+
 .sidebar {
     grid-area: sidebar;
     background-color: #555;
     color: white;
     padding: 20px;
     z-index: 2;
-}
-
-.content {
-    grid-area: content;
-    padding: 20px;
 }
 
 .sidebar ul {
@@ -122,5 +121,72 @@ body {
     margin-bottom: 10px;
 }
 
+/* Content Page */
 
+.content {
+    grid-area: content;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(2, calc(50% - 10px)); /* 2 rows, adjust height */
+    gap: 20px; /* Adjust gap as needed */
+}
+
+.grid-item-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Full height of the grid area */
+}
+
+.grid-item {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-grow: 1; /* Allows the grid item to fill the container */
+    display: flex;
+    align-items: center;
+    width: 100%; /* Full width of the container */
+    margin-top: 30px; /* Space for the title */
+    flex-direction: column; /* Stack title and content vertically */
+    justify-content: start; /* Align content to the start of the flex container */
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid-top-title {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 1em;
+    color: #333;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item-title {
+    font-size: 1em; /* Adjust the font size as needed */
+    color: #333; /* Title text color */
+    margin-bottom: 50px; /* Space between the title and the content */
+    margin-top: 40px;
+}
+
+.grid-item-content {
+    font-size: 0.9em; /* Adjust the font size as needed */
+    color: #666; /* Content text color */
+    margin-left: 20px;
+    margin-right: 20px;
+    /* Additional styling as needed */
+}
 
