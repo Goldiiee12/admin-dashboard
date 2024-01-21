@@ -142,9 +142,8 @@ body {
 .sidebar-button-header {
     display: flex;
     align-items: center;
-    padding: 2.5em 3em; /* Increased padding for larger size */
-    margin-left: -50px;
-    margin-top: -50px;
+    padding: 2.5em 1em; /* Increased padding for larger size */
+    margin: 5px 0;
     border: none;
     background-color: transparent;
     color: inherit;
@@ -171,7 +170,7 @@ body {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    grid-template-rows: repeat(2, calc(50% - 10px)); /* 2 rows, adjust height */
+    grid-template-rows: repeat(2, calc(50% - 200px)); /* 2 rows, adjust height */
     gap: 20px; /* Adjust gap as needed */
 }
 
@@ -232,4 +231,3 @@ body {
     margin-right: 20px;
     /* Additional styling as needed */
 }
-
